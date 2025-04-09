@@ -1,0 +1,466 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+     width: 100vw;
+     height: auto;
+    background-color: #fffaf8;
+    overflow-x: hidden;
+  }
+  
+  .navbar {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fffaf8;
+    position: relative;
+    z-index: 100;
+    padding-right: 5%;
+    padding-left: 5%;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-icon {
+    width: 80px;
+    object-fit: contain;
+  }
+  
+  
+  .nav-links {
+    display: flex;
+    gap: 60px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #b2a9a7;
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    position: relative;
+  }
+  
+  .nav-links a.active::after,
+  .nav-links a:hover::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #e5cab9;
+    bottom: -2px;
+    left: 0;
+  }
+  
+  /* Hamburger Menu Toggle */
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+  }
+  
+  .menu-toggle span {
+    width: 30px;
+    height: 3px;
+    background-color: #d4bba7;
+    transition: 0.3s ease;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: flex;
+    }
+  
+    .nav-links {
+      width: 100%;
+      height: 50vh;
+      flex-direction: column;
+      background-color: #fffaf8;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 100%;
+      display: none;
+      text-align: center;
+      padding: 20px 0;
+      overflow: hidden;
+    }
+  
+    .nav-links.open {
+      display: flex;
+    }
+  
+    .nav-links li {
+      margin: 10px 0;
+    }
+  
+    .menu-toggle.open span:nth-child(1) {
+      transform: rotate(45deg) translateY(7px);
+    }
+  
+    .menu-toggle.open span:nth-child(2) {
+      opacity: 0;
+    }
+  
+    .menu-toggle.open span:nth-child(3) {
+      transform: rotate(-45deg) translateY(-7px);
+    }
+
+    .banner{
+        background-position: center;
+    }
+  }
+  
+
+
+  /* ............banner.................... */
+
+  .banner{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url("images/DeWatermark.ai_1744177166062.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    justify-content: end;
+    padding-left: 5%;
+    padding-bottom: 5%;
+    background-attachment: fixed;
+  }
+
+  .banner h1{
+    font-size: 4.5rem;
+    font-family: "Prata", serif;
+    color: #fffaf8;
+    font-weight: 300;
+  }
+  .banner p{
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1.2rem;
+    color: #fffaf8;
+    padding-left: 1%;
+    margin-top: 1%;
+  }
+
+/* ................about................... */
+
+.about-container{
+    width: 100%;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e9dccd;
+}
+.about-cont{
+    width: 55%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    background-image: url("images/processed_image-copy.png");
+    background-size: 320px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #e5cab9;
+    background-attachment: fixed;
+}
+.about-cont h3{
+    font-size: 2rem;
+    font-family: "Prata", serif;
+    font-weight: 400;
+    color: #fffaf8;
+}
+.about-cont p{
+    font-size: 1.2rem;
+    font-family: "Prata", serif;
+    color: #fffaf8;
+    font-weight: 300;
+    padding: 20%;
+    padding-top: 0;
+    padding-bottom: 0;
+    text-align: center;
+    letter-spacing: 0.5px;
+    line-height: 30px;
+    margin-top: 1%;
+}
+.about-cont a{
+    color: #fffaf8;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-family: 'Segoe UI', sans-serif;
+    /* border-bottom: 1px solid #fff; */
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+.about-cont span{
+    font-size: 18px;
+    transition: transform 0.3s ease;
+}
+.about-cont a:hover span{
+    transform: translateX(5px);
+}
+
+.about-images{
+    width: 100%;
+    padding: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: #d4bba7; */
+}
+.about-images img:nth-child(1) {
+    width: 250px;
+    height: 300px;
+}
+
+.about-images img:nth-child(2) {
+    width: 300px;
+    height: 400px;
+    opacity: 0.8;
+}
+
+.about-images img:nth-child(3) {
+     width: 300px;
+     height: 300px;
+}
+
+.about-images img:nth-child(4) {
+    width: 300px;
+    opacity: 0.8;
+}
+
+/* ..............service................ */
+
+
+.service-page{
+    width: 100%;
+    padding: 3%;
+    padding-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.service-title{
+    width: 100%;
+    padding-top: 6%;
+    padding-bottom: 3%;
+    /* background-color: aqua; */
+}
+.service-title h2{
+    font-family: "Prata", serif;
+    font-size:2.2rem;
+    color:#b2a9a7;
+    font-weight: 300;
+}
+.service-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.services{
+    width: 100%;
+    height: 450px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: #fff1e9; */
+}
+#service-1{
+    border-top: 2px solid #d4bba7;
+}
+.services img{
+    width: 30%;
+    height: 450px;
+}
+
+.service-cont{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    /* background-color: #b74010; */
+    padding-right: 28%;
+    border-bottom: 2px solid #d4bba7;
+}
+.service-cont h3{
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 2rem;
+    font-weight: 400;
+    color: #d4bba7;
+}
+.service-cont p{
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;  
+    color: #b2a9a7;
+}
+.service-cont a{
+    color: #b2a9a7;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-family: 'Segoe UI', sans-serif;
+    /* border-bottom: 1px solid #fff; */
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8%;
+}
+.service-cont span{
+    font-size: 1.5rem;
+    font-weight: 300;
+    transition: transform 0.3s ease;
+}
+.service-cont a:hover span{
+    transform: translateX(5px);
+}
+
+/* ...................banner................. */
+
+.banner2-container{
+    width: 100%;
+    height: 120vh;
+    background-image: url("images/DeWatermark.ai_1744198721289.png");
+    background-size: 100vw 120vh;
+    background-color: #e5cab9;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+/* ..............testimonials.................... */
+
+.testimonials {
+     width: 100%;
+     padding: 5%;
+     display: flex;
+     flex-direction: column;
+     background-color: #fff1e9;
+  }
+  
+  .testimonials h2 {
+    font-size: 2.8rem;
+    margin-bottom: 60px;
+    font-family: "Prata", serif;
+    font-weight: 400;
+    color:#b2a9a7;
+  }
+  
+  .testimonial-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+  }
+  
+  .testimonial {
+    flex: 1 1 300px;
+    max-width: 340px;
+    text-align: left;
+  }
+  
+  .testimonial h3 {
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+    font-family: 'Segoe UI', sans-serif;
+    color: #d4bba7;
+  }
+  
+  .testimonial p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-family: 'Segoe UI', sans-serif;
+    color: #d4bba7;
+  }
+  
+  .stars {
+    font-size: 1.5rem;
+    color: #d4bba7;
+  }
+
+
+
+  /* ................foooter............... */
+
+
+
+  
+
+.footer{
+    width: 100%;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    background-color: #e9dccd;
+}
+.footer-cont{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.footer img{
+    width: 200px;
+    border-right: 2px solid #fffaf8;
+}
+.footer-links{
+    width: 50%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #fffaf8;
+}
+.footer-links a{
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-family: "Jost", sans-serif;
+    color: #b2a9a7;
+}
+
+.footer-social{
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.footer-social img{
+    width: 40px;
+    border: none;
+}
+.footer-bottom{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #d4bba7;
+    font-size: 1rem;
+    font-family: "Jost", sans-serif;
+    color: #fffaf8;
+}
