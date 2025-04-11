@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="about.css" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bubbler+One&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Jost:ital,wght@0,100..900;1,100..900&family=Lacquer&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Madimi+One&family=Manrope:wght@200..800&family=Monoton&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Play:wght@400;700&family=Playwrite+NZ+Guides&family=Playwrite+US+Modern+Guides&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prata&family=Roboto+Slab:wght@100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Syne:wght@400..800&family=Water+Brush&family=Waterfall&display=swap" rel="stylesheet">
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <!-- navbar -->
+    <nav class="navbar">
+        <div class="logo">
+          <img src="images\logo.png" alt="Logo" class="logo-icon" />
+        </div>
+    
+        <div class="menu-toggle" id="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+    
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="services.html">TREATMENTS</a></li>
+          <li><a href="#" class="active">ABOUT</a></li>
+          <li><a href="#">BOOK APPOINTMENT</a></li>
+        </ul>
+      </nav>
+
+
+    <!-- banner -->
+
+    <div class="banner">
+        <div class="banner-cont">
+            <h1>Results-driven treatments <br> that center your natural beauty</h1>
+            <p>Reed Beauty and Fitness Center was founded by three friends who share a deep passion for wellness and beauty. United by a vision to create a space that nurtures both inner and outer well-being, we combined our expertise to bring Reed to life. Our journey began with a simple goal: to offer a sanctuary where self-care, fitness, and beauty come together in harmony.</p>
+        </div>
+        <div class="banner-img">
+            <img src="images\6cfd511a-c4f2-4fad-b305-f95f77daee4a.jpeg" alt="">
+            <img id="banner-img2" src="images\5a69aa4c-03d4-403b-bd60-6af5734d2ee7.jpeg" alt="">
+        </div>
+      
+    </div>
+      
+    <script>
+      const toggle = document.getElementById('menu-toggle');
+      const nav = document.getElementById('nav-links');
+  
+      toggle.addEventListener('click', () => {
+        nav.classList.toggle('open');
+        toggle.classList.toggle('open');
+      });
+    </script>      
+</body>
+</html>
