@@ -133,7 +133,7 @@ body {
     padding: 5%;
     display: flex;
     flex-direction: column;
-    background-color: #e9dccd;
+    background-color: #fffaf8;
 }
 
 .banner-cont{
@@ -141,6 +141,7 @@ body {
     display: flex;
     flex-direction: column;
     padding-right: 50%;
+    padding-top: 5%;
     gap: 20px;
     position: relative;
 }
@@ -148,32 +149,261 @@ body {
     font-size: 2.8rem;
     font-family: "Prata", serif;
     font-weight: 300;
-    color: #fffaf8;
+    color: #d4bba7;
 }
   .banner p{
-    font-family: 'Segoe UI', sans-serif;
     font-size: 1rem;
-    color: #fffaf8;
+    font-family: 'Segoe UI', sans-serif;
+    letter-spacing: 1px;
+    line-height: 25px;
+    color: #d4bba7;
 }
 
 .banner-img{
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    /* justify-content: center; */
     margin-top: 3%;
     position: relative;
 }
 .banner-img img{
-    width: 600px;
-    height: 600px;
+    width: 400px;
+    height: 400px;
 }
 #banner-img2{
     width: 500px;
-    height: 500px;
+    height: 600px;
     position: absolute;
-    top: -180px; /* adjust to visually place between */
+    top: -250px; /* adjust to visually place between */
     left: 75%;
     transform: translateX(-50%);
     z-index: 1;
+}
+
+
+
+
+/* ................why....................... */
+
+
+.wrapper {
+  height: 320vh; /* Enough height to scroll */
+  position: relative;
+}
+
+.panel {
+  position: sticky;
+  top: 0;
+  height: 80vh;
+  width: 100%;
+  padding-left: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  z-index: 1;
+  transition: all 0.5s ease;
+  color: #fffaf8;
+}
+
+.panel1 {
+  background-color: #e9dccd;
+  z-index: 1;
+}
+
+.panel2 {
+  background-color:#e5cab9;
+  z-index: 2;
+}
+
+.panel3 {
+  background-color: #d4bba7;
+  z-index: 3;
+}
+.panel4{
+  background-color: #b2a9a7;
+  z-index: 4;
+}
+
+.panel .content {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+.panel .content h2{
+  font-size: 2rem;
+  font-family: "Prata", serif;
+  font-weight: 300;
+}
+.panel .content p{
+  font-size: 1rem;
+  font-family: 'Segoe UI', sans-serif;
+  letter-spacing: 1px;
+  line-height: 25px;
+  padding-right: 5%;
+}
+
+.subtitle {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  font-weight: 400;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.panel img{
+  width: 600px;
+  animation: floatUpDown 3s ease-in-out infinite;
+}
+
+@keyframes floatUpDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+
+/* ................appointment........... */
+
+.appointment-page{
+  width: 100%;
+  padding: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 200px;
+  background-color: #fffaf8;
+}
+
+.appointment-cont{
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /* background-color: rgb(120, 70, 70); */
+  color: #d4bba7;
+}
+.appointment-cont h2{
+  font-size: 2rem;
+  font-family: "Prata", serif;
+  font-weight: 300;
+  margin-bottom: 5%;
+}
+.appointment-cont p{
+  font-size: 1rem;
+  font-family: 'Segoe UI', sans-serif;
+  letter-spacing: 1px;
+  line-height: 25px;
+}
+.appointment-cont span{
+  color: #b2a9a7;
+}
+
+.appointment-card{
+  width: 40%;
+  height: 80vh;
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff1e9;
+  box-shadow: 0 4px 12px rgba(255, 241, 233, 0.1), 0 1px 3px rgba(255, 241, 233, 0.1);
+  background-image: url("images/WhatsApp_Image_2025-04-11_at_11.57.43_af7bebf8-removebg-preview.png");
+  background-size: 1000px;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+.appointment-card img{
+     width: 400px;
+
+}
+
+.appointment-card a{
+  color: #b2a9a7;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-family: 'Segoe UI', sans-serif;
+  /* border-bottom: 1px solid #fff; */
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8%;
+}
+.appointment-card span{
+  font-size: 1.5rem;
+  font-weight: 300;
+  transition: transform 0.3s ease;
+}
+.appointment-card a:hover span{
+  transform: translateX(5px);
+}
+
+
+
+  /* ................foooter............... */
+
+
+
+  
+
+  .footer{
+    width: 100%;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    background-color: #e9dccd;
+}
+.footer-cont{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.footer img{
+    width: 200px;
+    border-right: 2px solid #fffaf8;
+}
+.footer-links{
+    width: 50%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #fffaf8;
+}
+.footer-links a{
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-family: "Jost", sans-serif;
+    color: #b2a9a7;
+}
+
+.footer-social{
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.footer-social img{
+    width: 40px;
+    border: none;
+}
+.footer-bottom{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #d4bba7;
+    font-size: 1rem;
+    font-family: "Jost", sans-serif;
+    color: #fffaf8;
 }
